@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     @livewireStyles
 </head>
 
-<body class="bg-slate-400">
+<body class="bg-blue-100">
     {{ $content }}
+    <script src="https://flowbite.com/docs/flowbite.min.js?v=1.6.4a"></script>
     @livewireScripts
 </body>
 </html>
