@@ -14,7 +14,7 @@
     @livewireStyles
 </head>
 
-<body class="bg-blue-100">
+<body class="bg-blue-100 overflow-x-hidden">
     {{ $content }}
     <script src="https://flowbite.com/docs/flowbite.min.js?v=1.6.4a"></script>
     @livewireScripts

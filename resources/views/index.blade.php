@@ -1,12 +1,12 @@
 <x-layout>
-    <x-slot name="title">Welcome</x-slot>
+    <x-slot name="title">Lasse's portfolio</x-slot>
 
     <x-slot name="content">
         <x-navbar></x-navbar>
 
         <x-banner>
             <x-slot name="title">Lasse Haslund</x-slot>
-            <x-slot name="description">Jeg bruger denne side til at fremvise mine tidligere projekter og mit cv</x-slot>
+            <x-slot name="description">Ung mand som brænder for mit arbejde, og tager ære i det jeg laver</x-slot>
             <x-slot name="image">
                 /storage/round_profil.png
             </x-slot>
@@ -18,7 +18,7 @@
                 MapFlow er platform som hjælper virksomheder med at finde den bedste rute mellem ens opgaver, så de får mest ud af deres tid. Det sker ved at bruge en alogritme som finder den korteste rute mellem opgaverne, og viser ruten på et kort.
             </x-slot>
             <x-slot name="picture">
-                /storage/round_profil.png
+                /storage/mapflow_logo.png
             </x-slot>
             <x-slot name="linkbutton">https://mapflow.dk</x-slot>
             <x-slot name="buttontext">MapFlow</x-slot>
@@ -41,10 +41,10 @@
         <x-content-box>
             <x-slot name="title">RuneLite Plugin</x-slot>
             <x-slot name="description">
-                Et plugin til RuneLite, som er en open source client til spillet Old School RuneScape. Det er lavet til at hjælpe med at blive mere effektiv i spillet, og det bliver brugt af 1700+ aktiv brugere. Det er skrevet i Java.
+                Et plugin til RuneLite, som er en open source client til spillet Old School RuneScape. Det er lavet til at hjælpe med at blive mere effektiv i spillet, og det bliver brugt af 1800+ aktiv brugere. Det er skrevet i Java.
             </x-slot>
             <x-slot name="picture">
-                /storage/round_profil.png
+                /storage/dpshelper_logo.png
             </x-slot>
             <x-slot name="linkbutton">https://github.com/LHPlugins/plugin-hub/tree/dpshelper</x-slot>
             <x-slot name="buttontext">Github</x-slot>
