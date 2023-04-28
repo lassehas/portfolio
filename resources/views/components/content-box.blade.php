@@ -19,7 +19,6 @@
 
             <div class="grid place-items-center w-full mt-4">
                 <div class="border-t w-2/3">
-
                 </div>
                 <img class="mt-3 h-7 md:h-8" src="{{ $picture2 }}" alt="">
             </div>

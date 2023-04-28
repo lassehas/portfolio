@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OSRSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,9 @@ Route::get('/', function () {
 Route::get('/cv', function () {
     return view('cv');
 });
+
+Route::get('/projects', function () {
+    return view('projects');
+});
+
+Route::get('/osrsbotplanner', [OSRSController::class, 'planned'])->name('osrsbotplanner');
