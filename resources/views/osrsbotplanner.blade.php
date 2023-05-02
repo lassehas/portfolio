@@ -1,4 +1,3 @@
-
 <x-layout>
     <x-slot name="title">OSRS Bot Planner</x-slot>
 
@@ -10,7 +9,8 @@
                 justify-content: center;
                 font-size: 40px;
             }
-            p {
+
+            p.mb-10.mt-5 {
                 display: flex;
                 justify-content: center;
                 text-align: center;
@@ -28,12 +28,9 @@
                 what order to train them in.
             </p>
 
-            @for($i = 0; $i < Count($random); $i++)
-                <p class="my-2">
-                    {{ $list[$random[$i]]['script'] }} for {{ $runTime[$i] }} hours
-                </p>
-            @endfor
+            @livewire('osrsbotplanner')
         </div>
 
     </x-slot>
 </x-layout>
+
