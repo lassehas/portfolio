@@ -8,6 +8,10 @@ class Osrsbotplanner extends Component
 {
     public $list = [];
 
+    protected $listeners = [
+        '$refresh'
+    ];
+
     public function mount(){
         $scripts = \App\Models\Script::all()->random(3);
         $sum = rand(5, 9);
@@ -21,23 +25,15 @@ class Osrsbotplanner extends Component
             $script->runtime = $runtime[$index];
         }
         $this->list = $scripts;
-        dd($this->list->toArray());
     }
 
     public function render()
     {
-        //Number of options to pick
-        $options = 3;
-        $random = array_rand($options);
-
-
-        //Add num1, num2, num3 to time array
-        $time = [];
-        array_push($time, $num1, $num2, $num3);
-        return view('livewire.osrsbotplanner', ['list' => $list, 'random' => $random, 'runTime' => $time]);
+        return view('livewire.osrsbotplanner');
     }
 
-    public function randomizeList($options = 3){
-        $this->randomList = array_rand($this->list, $options);
+    public function refreshComponent()
+    {
+        $this->emitSelf('refreshComponent');
     }
 }

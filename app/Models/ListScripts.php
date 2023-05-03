@@ -9,8 +9,4 @@ class ListScripts extends Model
 {
     use HasFactory;
 
-    public function pickRandomList(){
-        $list = \App\Models\Script::all();
-
-    }
 }
