@@ -18,7 +18,11 @@ class Osrsbotplanner extends Component
 
     public function reroll()
     {
-        $scripts = \App\Models\Script::all()->random(3);
+        $scripts = \App\Models\Script::all();
+        if ($scripts->count() < 3) {
+            return;
+        }
+        $scripts = $scripts->random(3);
         $sum = rand(5, 9);
         $num1 = rand(0, $sum);
         $num2 = rand(0, $sum - $num1);
