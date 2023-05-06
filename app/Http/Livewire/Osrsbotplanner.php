@@ -7,12 +7,17 @@ use Livewire\Component;
 class Osrsbotplanner extends Component
 {
     public $list = [];
-
-    protected $listeners = [
-        '$refresh'
-    ];
-
     public function mount(){
+        $this->reroll();
+    }
+
+    public function render()
+    {
+        return view('livewire.osrsbotplanner');
+    }
+
+    public function reroll()
+    {
         $scripts = \App\Models\Script::all()->random(3);
         $sum = rand(5, 9);
         $num1 = rand(0, $sum);
@@ -25,15 +30,5 @@ class Osrsbotplanner extends Component
             $script->runtime = $runtime[$index];
         }
         $this->list = $scripts;
-    }
-
-    public function render()
-    {
-        return view('livewire.osrsbotplanner');
-    }
-
-    public function refreshComponent()
-    {
-        $this->emitSelf('refreshComponent');
     }
 }

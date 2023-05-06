@@ -2,7 +2,7 @@
     <x-slot name="title">OSRS Bot Planner</x-slot>
 
     <x-slot name="content">
-
+        @livewireStyles
         <style>
             h1 {
                 display: flex;
@@ -30,7 +30,7 @@
 
             @livewire('osrsbotplanner')
         </div>
-
+        @livewireScripts
     </x-slot>
 </x-layout>
 
