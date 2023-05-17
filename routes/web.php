@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OSRSController;
+use App\Http\Controllers\RapportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,7 @@ Route::get('/cv', function () {
 Route::get('/projects', function () {
     return view('projects');
 });
+
+Route::get('/rapportgenerator', [RapportController::class, 'index'])->name('rapportgenerator');
 
 Route::get('/osrsbotplanner', [OSRSController::class, 'planned'])->name('osrsbotplanner');
