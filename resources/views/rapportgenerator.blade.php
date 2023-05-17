@@ -66,6 +66,28 @@
                             Skadelige backlinks
                         </div>
                     </li>
+                    <li class="grid grid-cols-3 my-1">
+                        <div class="col-span-1">
+                            <label class="flex items-center justify-end">
+                                <input class="w-5 h-5 mr-2" type="checkbox" name="meta_title" id="anchor_text">
+                            </label>
+
+                        </div>
+                        <div class="col-span-2 grid justify-start">
+                            Anchor text
+                        </div>
+                    </li>
+                    <li class="grid grid-cols-3 my-1">
+                        <div class="col-span-1">
+                            <label class="flex items-center justify-end">
+                                <input class="w-5 h-5 mr-2" type="checkbox" name="meta_title" id="low_word_count">
+                            </label>
+
+                        </div>
+                        <div class="col-span-2 grid justify-start">
+                            Low word count
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -93,6 +115,8 @@
             let non_canonical = document.getElementById('non_canonical');
             let sitemap = document.getElementById('sitemap');
             let backlinks = document.getElementById('backlinks');
+            let anchor_text = document.getElementById('anchor_text');
+            let low_word_count = document.getElementById('low_word_count');
 
             //Add event listeners to checkboxes to update the report in textarea
             meta_title.addEventListener('change', function () {
@@ -112,6 +136,14 @@
             });
 
             backlinks.addEventListener('change', function () {
+                updateReport();
+            });
+
+            anchor_text.addEventListener('change', function () {
+                updateReport();
+            });
+
+            low_word_count.addEventListener('change', function () {
                 updateReport();
             });
 
@@ -142,6 +174,17 @@
                 ' Dette er ofte set som spam med det formål at tjene penge. Vi holder hele tiden øje med jeres domæne, og finder skadelige domæner.' +
                 ' Disse sender vi direkte til Google, hvor vi fortæller at jeres domæne ikke er associeret med disse.\n';
 
+            let text_anchor_text_header = 'Anchor text.\n';
+            let text_anchor_text = 'Anchor text er den tekst der bliver brugt til at linke til en anden side. ' +
+                'Det er vigtigt at anchor texten er relevant for den side der bliver linket til. ' +
+                'Det er også vigtigt at anchor texten ikke er for ensartet, da det kan opfattes som spam af søgemaskinerne.\n';
+
+            let text_low_word_count_header = 'Lavt antal ord\n';
+            let text_low_word_count = 'Det er vigtigt at have en god mængde tekst på en side, da det er med til at fortælle søgemaskinerne hvad siden handler om.' +
+                ' Kunden opfordres til selv at lave nogle SEO forbedringer, ift. lavt antal ord (sider med færre end 200 ord). ' +
+                ' Der er udarbejdet en oversigt over sider med færre end 200 ord. Mængden af tekst placeret på sider er et kvalitets signal til søgemaskiner. ' +
+                ' \nSøgemaskiner foretrækker at give så meget information til brugerne som muligt, så sider med længere indhold har tendens til at placeres højere i søgeresultaterne i modsætning til dem med lavere antal ord. Vi anbefaler min. 200 ord pr. side.\n';
+
             function updateReport() {
                 let report = '';
                 if (meta_title.checked) {
@@ -159,6 +202,12 @@
                 if (backlinks.checked) {
                     report += text_backlinks_header + text_backlinks + '\n';
                 }
+                if (anchor_text.checked) {
+                    report += text_anchor_text_header + text_anchor_text + '\n';
+                }
+                if (low_word_count.checked) {
+                    report += text_low_word_count_header + text_low_word_count + '\n';
+                }
                 document.getElementById('rapport').value = report;
             }
 
@@ -170,7 +219,7 @@
                 document.execCommand("copy");
             }
 
-            
+
 
 
         </script>
