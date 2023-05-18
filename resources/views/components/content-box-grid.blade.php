@@ -12,28 +12,28 @@
                 <img class="w-10 h-10" src="/storage/laravel_icon.png" alt="">
                 <div class="border-t my-2"></div>
                 <div class="text-center">
-                    <a class="hover:text-blue-400" href="/">MapFlow</a>
+                    <a class="hover:text-blue-400 hover:underline" href="https://mapflow.dk">MapFlow</a>
                 </div>
             </div>
             <div class="grid justify-center col-span-1">
                 <img class="w-10 h-10" src="/storage/csharp_logo.png" alt="">
                 <div class="border-t my-2"></div>
                 <div class="text-center">
-                    <a class="hover:text-blue-400" href="/">Tidsregistrering</a>
+                    <a class="hover:text-blue-400 hover:underline" href="/projects">Tidsregistrering</a>
                 </div>
             </div>
             <div class="grid justify-center col-span-1">
                 <img class="w-10 h-10" src="/storage/java_logo.png" alt="">
                 <div class="border-t my-2"></div>
                 <div class="text-center">
-                    <a class="hover:text-blue-400" href="/">RuneLite Plugin</a>
+                    <a class="hover:text-blue-400 hover:underline" href="/projects">RuneLite Plugin</a>
                 </div>
             </div>
             <div class="grid justify-center col-span-1">
                 <img class="w-10 h-10" src="/storage/python_logo.png" alt="">
                 <div class="border-t my-2"></div>
                 <div class="text-center">
-                    <a class="hover:text-blue-400" href="/">Home</a>
+                    <!--<a class="hover:text-blue-400 hover:underline" href="/projects  ">Home</a>-->
                 </div>
             </div>
         </div>
